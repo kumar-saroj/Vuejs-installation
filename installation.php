@@ -190,7 +190,9 @@ import axios from 'axios'
     }
 </script>
 
-HOME PAGE MOUNT CONDITION===================================mounted(){
+HOME PAGE MOUNT CONDITION
+===================================
+mounted(){
            let userinfo = localStorage.getItem('user-info');
            console.warn(userinfo)
            if(!userinfo){
