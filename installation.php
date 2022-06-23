@@ -117,7 +117,8 @@ export default {
 
 FOR DYNAMIC TITLE
 ==================================
-1. create a .env file inside your root directory.env -> VUE_APP_TITLE = Saroj First View App2. open index.html inside public folderAdding in title section : process.env.VUE_APP_TITLE 3. open router.js file after const router = createRouter({})  adding this coderouter.beforeEach((to, from, next) => {
+1. create a .env file inside your root directory.env -> VUE_APP_TITLE = Saroj First View App2. open index.html inside public folderAdding in title section : process.env.VUE_APP_TITLE 3. open router.js file after const router = createRouter({})  adding this code
+router.beforeEach((to, from, next) => {
     //console.log('beforeeach');
     document.title = `${process.env.VUE_APP_TITLE} - ${to.name}` 
     next()
